@@ -14,11 +14,11 @@ fun MainScreen() {
 
     NavHost(navController = navController, startDestination = Routes.Login.routes ){
         composable(Routes.Login.routes) {
-//            LoginPage(navController = navController)
+            LoginPage(navController = navController)
         }
 
         composable(Routes.Home.routes) {
-            HomePage(navController = navController)
+            HomePage()
         }
     }
 }

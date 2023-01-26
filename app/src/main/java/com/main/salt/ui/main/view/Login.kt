@@ -2,7 +2,6 @@ package com.main.salt.ui.main.view.login
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Button
 import androidx.compose.material.Text
@@ -12,23 +11,19 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.main.salt.ui.component.PrimaryButton
 import com.main.salt.ui.theme.SaltTheme
 import com.main.salt.utils.Routes
 
 @Composable
-fun LoginPage() {
+fun LoginPage(navController: NavHostController) {
     Column(
         modifier = Modifier.padding(20.dp),
         verticalArrangement = Arrangement.Center,
@@ -64,8 +59,7 @@ fun LoginPage() {
 
         Box(modifier = Modifier.padding(40.dp, 0.dp, 40.dp, 0.dp)) {
             Button(
-//                onClick = { navController.navigate(Routes.Home.route) },
-                onClick = {},
+                onClick = { navController.navigate(Routes.Home.routes) },
                 shape = RoundedCornerShape(50.dp),
                 modifier = Modifier
                     .fillMaxWidth()
@@ -81,8 +75,6 @@ fun LoginPage() {
 @Composable
 fun LoginPreview() {
     SaltTheme() {
-        LoginPage(
 
-        )
     }
 }
