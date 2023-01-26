@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.main.salt.ui.main.MainScreen
 import com.main.salt.ui.theme.Purple700
 import com.main.salt.ui.theme.SaltTheme
 import com.main.salt.utils.Routes
@@ -35,7 +36,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Prabowo")
+//                    Greeting("Prabowo")
+                    MainScreen()
                 }
             }
         }
@@ -52,6 +54,7 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     SaltTheme {
-        Greeting("Android")
+//        Greeting("Android")
+        MainScreen()
     }
 }

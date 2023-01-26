@@ -18,7 +18,9 @@ fun MainScreen() {
         }
 
         composable(Routes.Home.routes) {
-            HomePage()
+            HomePage(
+                navController= navController
+            )
         }
     }
 }
