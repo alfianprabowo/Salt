@@ -12,5 +12,5 @@ interface ApiService {
     suspend fun login():Response<LoginResponse>
 
     @GET("/users/")
-    suspend fun fetchUser():Response<UserResponse>
+    suspend fun getUser():Response<UserResponse>
 }
